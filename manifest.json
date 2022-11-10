@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Katana",
+    "version": "1.0",
+
+    "description": "Katana is a an extension that allows you to easily manage videoplayers online.",
+
+    "icons": {
+        "64": "icons/katana.png"
+    },
+
+    "browser_action": {
+        "default_icon": "icons/katana.png",
+        "default_title": "Katana"
+      },
+
+    "content_scripts":[
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["js/jquery-3.6.1.min.js", "js/katana.js"]
+        }
+    ],
+
+    "web_accessible_resources": []
+}
